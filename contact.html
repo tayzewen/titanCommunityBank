@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titan Community Bank</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://use.typekit.net/syw7zps.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Hanuman:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div id="navLogo">Titan Community Bank</div>
+
+        <nav >
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="login.html" class="homepage-btn account-btn">Sign In</a>
+                </li>
+                <li>
+                    <a href="account.html" class="homepage-btn account-btn" id="account-link">Account</a>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="main-container" id="about-container">
+        <div class="main-col">
+            <h1 class="form-heading">Contact</h1>
+            <p>Got a question, suggestion or feedback? We'd love to hear from you. Simply fill out the form with your name, email address and message, and we'll get back to you as soon as possible.</p>
+
+            <p>At Titan Community Bank, we're committed to providing the best possible banking experience for our customers, and your input is always valuable to us.</p>
+
+        </div>
+        
+        <div class="elements-container">
+            <div class="elements-col card" id="contact-form">
+                <form action="#">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                  
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                  
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" required></textarea><br>
+                  
+                    <input type="submit" value="Submit" class="homepage-btn" id="contact-submitBtn">
+                </form>
+            </div>
+        </div>
+        
+
+    </div>
+
+
+
+    <footer>
+
+        <div class="footer-container">
+            <div id="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div id="hours">
+    
+                <ul>
+                    <p>Hours of Operation:</p>
+                    <li>Monday - Thursday: 7am - 6pm</li>
+                    <li>Friday: 7am - 4:30pm</li>
+                    <li>Saturday: CLOSED</li>
+                    <li>Sunday: CLOSED</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <script src="./js/navbar.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+:root {
+    --nav-bg-color: #0C1C60;
+    --nav-logo-color:#E4E3D3;
+    --heading-font: 'Hanuman', serif;
+    --paragraph-font: 'Alata', sans-serif;
+    --hero-title-color: #11121E;
+    --hero-secondary-color: #4D4D56;
+    --link-hover-color: #EA9010;
+    --link-hover-secondary-color:#F2BA6A;
+    --error-msg-color:#E60E0E;
+    --page-bg-color: #F5F4EF;
+    --form-bg-color: #FCFBFA;
+    --hr-color:#E1E1E3;
+}
+
+@media (max-width: 575.98px) {
+    body {
+        width: 100%;
+        overflow-x: hidden!important;
+    }
+    
+    .header {
+        padding: 1rem;
+    }
+
+    nav {
+        width: 15%;
+        justify-content: center;
+    }
+
+    .burger {
+        display: none;
+        cursor: pointer;
+    }
+    
+    .burger div {
+        width: 20px;
+        height: 3px;
+        margin: 5px;
+        background-color:var(--nav-logo-color);
+        transition: all 0.3s ease;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 50vh;
+        top: 12vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        background-color: var(--nav-bg-color);
+        padding: 1.5rem 0 1.5rem 0;
+        border-radius: 5px;
+    }
+
+    .nav-links a {
+        color: #EDEBD7;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    
+    .burger {
+        display: block;
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+    
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+        background-color: var(--link-hover-color);
+    }
+    
+    .toggle .line2 {
+        opacity: 0;
+    }
+    
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+        background-color: var(--link-hover-color);
+    }
+
+    .hero-image {
+        background-image: none;
+        background-color: var(--page-bg-color);
+    }
+
+    .hero-text {
+        width: auto;
+        padding: 1rem!important;
+        margin: 0;
+    }
+
+    #btn-container {
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+
+    #btn-container a {
+        margin-top: 1rem;
+    }
+
+    #hero-services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem;
+    }
+
+    .service {
+        margin-bottom: 1.5rem;
+    }
+
+    #hero-services p {
+        padding-top: 0;
+    }
+
+    #ad-container {
+        width: 100%;
+        padding: 2rem 0 2rem 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    #ad-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    form {
+        width: 100%;
+        padding: 0;
+    }
+
+    form input {
+        width: 90%;
+    }
+
+    .form-container {
+        padding: 1rem!important;
+        display: block;
+        width: 100%;
+        margin: 1rem!important;
+    }
+
+    .form-description {
+        width: 100%;
+    }
+
+    #account-container {
+        padding: 1rem;
+        display: block;
+    }
+
+    .card {
+        margin: 1rem 0!important;
+    }
+
+    .card-info {
+        padding: 1rem;
+    }
+    
+    .info-row {
+        flex-direction: column;
+        padding-bottom: .5rem;
+    }
+
+    .info-row p {
+        margin: 0;
+    }
+
+    .label {
+        width: 100%;
+    }
+
+    .input {
+        margin: 0;
+        width: 100%;
+        font-size: 1.25rem;
+    }
+
+    .rowOne, .rowTwo {
+        width: 90%!important;
+    }
+
+    .row-two-heading {
+        padding: 0 1rem;
+    }
+
+    .popup {
+        width: 90%;
+    }
+
+    .popup form {
+        padding: .5rem;
+    }
+
+    .popup form input {
+        width: 90%;
+    }
+
+    .popup h3 {
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .form-heading-container a {
+        padding-right: 1rem;
+        width: 25%;
+    }
+
+    #transaction-hist-div {
+        overflow-y: scroll;
+        padding: 0 0 1rem 0;
+    }
+
+    #transaction-history {
+        width: 150%;
+    }
+
+    .main-container {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-col {
+        width: auto;
+    }
+
+    .elements-container {
+        width: auto;
+        margin: 1rem;
+    }
+
+    .footer-container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .header {
+        padding: 1rem;
+    }
+
+    .hero-text {
+        padding: 1rem;
+        margin: 0;
+        width: auto;
+    }
+
+    .form-container {
+        padding: 1rem;
+        width: 100%;
+        margin: 1rem;
+    }
+
+    form input {
+        width: 90%;
+    }
+
+    #account-container {
+        padding: 1rem;
+        display: block;
+    }
+
+    .card {
+        margin: 1rem 2rem;
+    }
+
+    .card-info {
+        padding: 1rem;
+    }
+    
+    .info-row {
+        flex-direction: column;
+        padding-bottom: .5rem;
+    }
+
+    .info-row p {
+        margin: 0;
+    }
+
+    .label {
+        width: 100%;
+    }
+
+    .input {
+        margin: 0;
+        width: 100%;
+        font-size: 1.25rem;
+    }
+
+    .rowOne, .rowTwo {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .row-two-heading {
+        padding: 0 1rem;
+    }
+
+    .popup {
+        width: 90%;
+    }
+
+    .popup form {
+        padding: .5rem;
+    }
+
+    .popup form input {
+        width: 90%;
+    }
+
+    .popup h3 {
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .form-heading-container a {
+        padding-right: 1rem;
+        width: 25%;
+    }
+
+    .footer-container {
+        padding: 1rem;
+    }
+}
+
+
+@media (max-width: 991.98px) {
+    .hero-text {
+        width: auto;
+        padding: 2rem 2rem;
+    }
+
+    .form-container {
+        padding: 0;
+        width: 100%;
+        margin: 2rem;
+    }
+
+    form input {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 1399.98px) {
+    .account-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .account-links a {
+        margin: .2rem;
+    }
+}

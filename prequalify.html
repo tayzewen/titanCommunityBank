@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titan Community Bank</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://use.typekit.net/syw7zps.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Hanuman:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div id="navLogo">Titan Community Bank</div>
+
+        <nav >
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="login.html" class="homepage-btn account-btn">Sign In</a>
+                </li>
+                <li>
+                    <a href="account.html" class="homepage-btn account-btn" id="account-link">Account</a>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="page-container">
+        <div class="form-container">
+            <div class="form-description" id="loanDescription">
+                <h1 class="form-heading">Prequalify for Financing</h1>
+                <p>Fill out our loan qualification form and find out if you're eligible for a loan. Simply provide us with some basic information about your financial situation and we'll let you know if you meet our lending criteria. Applying is quick, easy, and completely confidential. Start your loan application process today.</p>
+            </div>
+    
+            <form id="loanQualification" name="loanQualification">
+    
+                <label for="email">Email Address:</label><br>
+                <input type="text" id="email" name="email"><br>
+    
+                <label for="emailConfirm">Re-enter Email Address:</label><br>
+                <input type="text" id="emailConfirm" name="emailConfirm"><span id="email-validation"></span><br>
+    
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><span id="fname-validation"></span><br>
+    
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+    
+                <label for="city">City:</label><br>
+                <input type="text" id="city" name="city"><br>
+                
+                <label for="state">State:</label><br>
+                <input type="text" id="state" name="state"><br>
+    
+                <label for="zip">Zip Code:</label><br>
+                <input type="number" id="zip" name="zip"><br>
+    
+                <label for="income">Annual Income:</label><br>
+                <input type="number" id="income" name="income"><br><br>
+                
+                <div id="checkbox-container">
+                    <input type="checkbox" id="terms" name="terms">
+                    <label for="terms" value="yes" id="cb"> This prequalification request serves as my written instruction to Titan Community Bank to obtain a “soft inquiry” about my credit information, which won’t affect my credit score. I agree that TCB can send me an email confirming my request.</label>
+                </div>
+                <br>
+
+                <button id="applyBtn" type="button" onclick="formValidation()">Apply</button>
+                <button id="reset" onclick="clear()">Reset</button><br>
+    
+                <table id="validationTable" class="validationTable">
+                    <tbody>
+            
+                    </tbody>
+                </table>
+              </form>
+    
+    
+        </div>
+
+    </div>
+
+    
+
+    
+
+    <footer>
+
+        <div class="footer-container">
+            <div id="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div id="hours">
+    
+                <ul>
+                    <p>Hours of Operation:</p>
+                    <li>Monday - Thursday: 7am - 6pm</li>
+                    <li>Friday: 7am - 4:30pm</li>
+                    <li>Saturday: CLOSED</li>
+                    <li>Sunday: CLOSED</li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="./js/navbar.js"></script>
+    <script src="./js/prequalify.js"></script>
+</body>
+</html>

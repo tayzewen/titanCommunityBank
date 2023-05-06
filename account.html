@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titan Community Bank</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://use.typekit.net/syw7zps.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Hanuman:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div id="navLogo">Titan Community Bank</div>
+
+        <nav >
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="login.html" class="homepage-btn account-btn">Sign In</a>
+                </li>
+                <li>
+                    <a href="account.html" class="homepage-btn account-btn" id="account-link">Account</a>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="page-container" id="account-container">
+
+        <!-- EDIT PERSONAL INFO POPUP FORM -->
+        <div id="editPersonalInfo" class="popup">
+            <div class="form-heading-container">
+                <h3 class="small-heading" id="editInfoHeading">Edit Personal Info</h3><a onclick="hideDiv()">&#10006; Close</a>
+            </div>
+
+            <hr class="heading-line">
+
+            <form id="personalInfoForm">
+                <label for="fnameInput">First Name: </label>
+                <input type="text" name="fnameInput" id="fnameInput">
+
+                <label for="lnameInput">Last Name: </label>
+                <input type="text" name="lnameInput" id="lnameInput">
+
+                <label for="birthdateInput">Date of Birth: </label>
+                <input type="date" name="birthdateInput" id="birthdateInput">
+
+                <label for="address-line1Input">Address Line 1: </label>
+                <input type="text" name="address-line1Input" id="address-line1Input">
+
+                <label for="address-line2Input">Address Line 2 (optional): </label>
+                <input type="text" name="address-line2Input" id="address-line2Input">
+
+                <label for="cityInput">City: </label>
+                <input type="text" name="cityInput" id="cityInput">
+
+                <label for="stateInput">State: </label>
+                <input type="text" name="stateInput" id="stateInput">
+
+                <label for="zipInput">Zip: </label>
+                <input type="number" name="zipInput" id="zipInput">
+
+                <button class="editFormBtn" type="button" onclick="editPersonalInfo()">Submit</button>
+                <button class="editFormBtn" type="button" onclick="resetPersonalInfo()">Clear</button>
+
+            </form>
+        </div>
+
+        <!-- EDIT EMAIL ADDRESSES POPUP FORM -->
+        <div id="editEmailAddresses" class="popup">
+            <div class="form-heading-container">
+                <h3 class="small-heading" id="editInfoHeading">Edit Email Addresses</h3><a onclick="hideDiv()">&#10006; Close</a>
+            </div>
+
+            <hr class="heading-line">
+
+            <form id="emailAddressForm">
+                <label for="primaryEmailInput">Primary Email: </label>
+                <input type="text" name="primaryEmailInput" id="primaryEmailInput">
+
+                <label for="secondaryEmailInput">Secondary Email: </label>
+                <input type="text" name="secondaryEmailInput" id="secondaryEmailInput">
+
+                <button class="editFormBtn" type="button" onclick="editEmailAddresses()">Submit</button>
+                <button class="editFormBtn" type="button" onclick="resetEmailAddresses()">Clear</button>
+
+            </form>
+        </div>
+
+        <!-- EDIT PHONE NUMBERS POPUP FORM -->
+        <div id="editPhoneNumbers" class="popup">
+            <div class="form-heading-container">
+                <h3 class="small-heading" id="editInfoHeading">Edit Phone Numbers</h3><a onclick="hideDiv()">&#10006; Close</a>
+            </div>
+
+            <hr class="heading-line">
+
+            <form id="phoneNumberForm">
+                <label for="primaryPhoneInput">Primary Phone: </label>
+                <input type="tel" name="primaryPhoneInput" id="primaryPhoneInput">
+
+                <label for="mobilePhoneInput">Mobile Phone: </label>
+                <input type="tel" name="mobilePhoneInput" id="mobilePhoneInput">
+
+                <label for="workPhoneInput">Work Phone: </label>
+                <input type="tel" name="workPhoneInput" id="workPhoneInput">
+
+                <button class="editFormBtn" type="button" onclick="editPhoneNumbers()">Submit</button>
+                <button class="editFormBtn" type="button" onclick="resetPhoneNumbers()">Clear</button>
+
+            </form>
+        </div>
+
+        <!-- DEPOSIT/WITHDRAW POPUP -->
+
+        <div id="updateBalance" class="popup">
+            <div class="form-heading-container">
+                <h3 class="small-heading" id="editInfoHeading">Deposit/Withdraw</h3><a onclick="hideDiv()">&#10006; Close</a>
+            </div>
+
+            <hr class="heading-line">
+
+            <form id="updateBalanceForm">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount">
+                <label for="description">Description:</label>
+                <input type="text" name="description" id="description">
+                <h4 class="minHeading">Balance: <span id="updateBalanceTotal"></span></h4>
+
+                <button onclick="deposit()" type="button" class="balanceBtn" id="depositBtn">Deposit &#x2b;</button>
+                <button onclick="withdraw()" type="button" class="balanceBtn" id="withdrawBtn">Withdraw &#8722;</button>
+
+
+
+            </form>
+        </div>
+
+
+        <!-- FIRST INFO ROW -->
+        <div class="rowOne">
+            
+            <div class="card" id="avatar">
+                <img src="./img/500x500.svg" alt="">
+                <h3 class="small-heading">Hello, <span id="customer-name">New Customer</span>!</h3>
+            </div>
+
+            <div class="card" id="balance">
+                <h4 class="minHeading">Available Balance</h4>
+                <h3 class="small-heading">$<span id="current-bal"></span></h3>
+
+                <button onclick="showBalanceDiv()">Deposit/Withdraw</button>
+
+                <h4><a href="spendingtrends.html">View spending habits <span id="arrow">&#8594;</span></a></h4>
+
+            </div>
+
+            <div class="card">
+                <h3 class="small-heading">Need help?</h3>
+            </div>
+
+        </div>
+
+
+        <!-- SECOND INFO ROW -->
+        <div class="rowTwo">
+            <div class="card row-two">
+                <div class="row-two-heading">
+                    <h3 class="small-heading">Transaction History</h3> 
+                </div>
+        
+                <hr class="heading-line">
+
+                <div class="card-info" id="transaction-hist-div">
+                    <table id="transaction-history">
+
+                    </table>
+                </div>
+
+            </div>
+
+            <div class="card row-two">
+                <div class="row-two-heading">
+                    <h3 class="small-heading">Personal Information</h3> 
+                    <a onclick="showPersonalInfo()">Edit</a>
+                </div>
+        
+                <hr class="heading-line">
+
+                <div class="card-info">
+                    <div class="info-row">
+                        <p class="label">First Name: </p>
+                        <p class="input" id="firstName"></p>
+                    </div>
+    
+                    <div class="info-row">
+                        <p class="label">Last Name: </p>
+                        <p class="input" id="lastName"></p>
+                    </div>
+
+                    <div class="info-row">
+                        <p class="label">Date of Birth: </p>
+                        <p class="input" id="birthdate"></p>
+                    </div>
+
+                    <div class="info-row">
+                        <p class="label">Address: </p>
+                        <p class="input" id="address-input">
+                            <span id="address-one"></span>
+                            <span id="address-two"></span>
+                            <br>
+                            <span id="city"></span>
+                            <span id="state"></span>
+                            <br>
+                            <span id="zip"></span>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card row-two">
+
+                <div class="row-two-heading">
+                    <h3 class="small-heading">Email Addresses</h3>
+                    <a onclick="showEmailAddresses()">Edit</a>
+                </div>
+
+                <hr class="heading-line">
+
+                <div class="card-info">
+
+                    <div class="info-row">
+                        <p class="label">Primary Email: </p>
+                        <p class="input" id="primaryEmail"></p>
+                    </div>
+
+                    <div class="info-row">
+                        <p class="label">Secondary Email: </p>
+                        <p class="input" id="secondaryEmail"></p>
+                    </div>
+
+                </div>
+        
+
+            </div>
+
+            <div class="card row-two">
+
+                <div class="row-two-heading">
+                    <h3 class="small-heading">Phone Numbers</h3>
+                    <a onclick="showPhoneNumbers()">Edit</a>
+                </div>
+
+                <hr class="heading-line">
+
+                <div class="card-info">
+
+                    <div class="info-row">
+                        <p class="label">Primary Phone: </p>
+                        <p class="input" id="primaryPhone"></p>
+                    </div>
+
+                    <div class="info-row">
+                        <p class="label">Mobile Phone: </p>
+                        <p class="input" id="mobilePhone"></p>
+                    </div>
+
+                    <div class="info-row">
+                        <p class="label">Work Phone: </p>
+                        <p class="input" id="workPhone"></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    
+
+    <footer>
+
+        <div class="footer-container">
+            <div id="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div id="hours">
+    
+                <ul>
+                    <p>Hours of Operation:</p>
+                    <li>Monday - Thursday: 7am - 6pm</li>
+                    <li>Friday: 7am - 4:30pm</li>
+                    <li>Saturday: CLOSED</li>
+                    <li>Sunday: CLOSED</li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+    <script src="./js/transaction.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/account.js"></script>
+</body>
+</html>
